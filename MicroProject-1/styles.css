@@ -8,6 +8,7 @@
 
 body * {
   box-sizing: border-box;
+  font-family: Inter;
 }
 
 body {
@@ -30,6 +31,10 @@ body {
   justify-content: space-between;
 }
 
+.gap-s {
+  gap: 32px;
+}
+
 .gap-xs {
   gap: 16px;
 }
@@ -40,6 +45,10 @@ body {
 
 .full-height {
   height: 100%;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 .content {
@@ -125,4 +134,22 @@ body {
 .footer {
   height: 33.5%;
   background-color: var(--black);
+  padding: 62px 191px 52px;
+}
+
+.footer_items {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 32px;
+  height: 36px;
+}
+
+.footer_right {
+  display: inline-grid;
+  justify-items: end;
+  grid-template-rows: repeat(auto-fill, 36px);
+}
+
+.grid_email {
+  grid-row: 5/6;
 }
