@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
+    <title>MicroProject 1</title>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="column full-height">
@@ -17,22 +18,29 @@
             Our team scouts the internet for the best designs, illustrations and
             art and delivers a truly inspiring one every day to your inbox
           </div>
-          <div class="content_subheader column">Show me how it looks</div>
-          <div class="row full-width gap-xs content_email_buttons">
-            <div>
-              <input
-                type="textarea"
-                class="content_textarea full-height"
-                placeholder="Your email address" />
+          <div id="content_email">
+            <div class="content_subheader column">Show me how it looks</div>
+            <div class="row full-width gap-xs content_email_buttons">
+              <div>
+                <input
+                  id="email_textarea"
+                  type="textarea"
+                  class="content_textarea full-height"
+                  placeholder="Your email address" />
+              </div>
+              <button
+                type="button"
+                class="content_button full-height"
+                name="Register"
+                onclick="buttonClick()">
+                Register Now
+              </button>
             </div>
-            <button
-              type="button"
-              class="content_button full-height"
-              name="Register">
-              Register Now
-            </button>
           </div>
-          <div class="content_footer column">
+          <div id="content_email_success" class="content_email_success">
+            Thank You!
+          </div>
+          <div id="free" class="content_footer column">
             Free - No Spam - No Data Sharing
           </div>
         </div>
