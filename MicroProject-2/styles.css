@@ -3,6 +3,7 @@
   --black: #282828;
   --grey: #484848;
   --offgrey: #9f9f9f;
+  --darkgrey: #6f7373;
   --white: #ffff;
   --border-radius: 8px;
   --purple: #6f6af7;
@@ -90,16 +91,17 @@ body {
 .navbar__searchbar {
   border-radius: 63px;
   padding: 0 25px 0 19px;
-  border-color: var(--white);
+  border: none;
+  font-family: DM Sans;
+  font-size: 24.43px;
 }
 
 .navbar__searchbar:focus-visible {
-  outline: 0px;
+  outline: 0;
+  border: none;
 }
 
 .navbar__searchbar::placeholder {
-  position: relative;
-  top: 3px;
   color: var(--offgrey);
   font-family: DM Sans;
   font-size: 24.43px;
@@ -107,4 +109,36 @@ body {
 
 .search_icon {
   right: 19px;
+}
+
+.content {
+  padding: 212px 162px;
+}
+
+.content_body {
+  padding-left: 28px;
+  gap: 49px;
+}
+
+.content__image {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content__textarea {
+  width: 100%;
+  border-radius: 20px;
+  border: 6px solid var(--white);
+  background: #e5d8ff;
+  box-shadow: 3px 5px 27px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 29px 34px;
+  color: var(--darkgrey);
+  font-family: DM Sans;
+  font-size: 29px;
+  line-height: 178.7%; /* 51.823px */
+  text-wrap: wrap;
+}
+
+.content__textarea:focus-visible {
+  outline: 0;
 }
