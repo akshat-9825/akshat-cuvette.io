@@ -1,0 +1,110 @@
+:root {
+  --brown: #ffcd9e;
+  --black: #282828;
+  --grey: #484848;
+  --offgrey: #9f9f9f;
+  --white: #ffff;
+  --border-radius: 8px;
+  --purple: #6f6af7;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.gap-s {
+  gap: 32px;
+}
+
+.gap-xs {
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.justify-c {
+  justify-content: center;
+}
+
+.align-c {
+  align-items: center;
+}
+
+.flex-c {
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.navbar {
+  height: 127px;
+  background-color: var(--purple);
+  padding: 0 44px;
+  font-family: DM Sans;
+  font-size: 36.43px;
+  color: var(--white);
+}
+
+.navbar__options {
+  gap: 47px;
+}
+
+.navbar__searchbar {
+  border-radius: 63px;
+  padding: 0 25px 0 19px;
+  border-color: var(--white);
+}
+
+.navbar__searchbar:focus-visible {
+  outline: 0px;
+}
+
+.navbar__searchbar::placeholder {
+  position: relative;
+  top: 3px;
+  color: var(--offgrey);
+  font-family: DM Sans;
+  font-size: 24.43px;
+}
+
+.search_icon {
+  right: 19px;
+}
