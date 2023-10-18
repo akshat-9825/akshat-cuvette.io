@@ -201,7 +201,6 @@ body {
   border-radius: 21px;
   background: #483eff;
   width: 100%;
-  max-width: 1542px;
   height: 717px;
   gap: 62px;
 }
@@ -298,4 +297,23 @@ body {
 
 .next_button:hover .icon_arrow {
   transform: translateX(5px);
+}
+
+.icon_contact {
+  position: fixed;
+  top: 55%;
+  right: 0;
+  z-index: 3;
+}
+
+.icons_container {
+  position: sticky;
+  margin-right: -100px;
+  left: auto;
+}
+
+.icon_container {
+  width: 88px;
+  height: 85px;
+  background-image: url(./static/Rectangle.svg);
 }
