@@ -8,6 +8,9 @@
     <link
       href="https://fonts.googleapis.com/css?family=DM Sans"
       rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet" />
   </head>
   <body>
     <div>
@@ -44,10 +47,72 @@
         <div class="content">
           <div class="row content_body">
             <image src="./static/randomImage.png" class="content__image" />
-            <input
-              type="textarea"
-              class="content__textarea column"
-              placeholder="It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......" />
+            <div class="content__textarea column">
+              <textarea
+                type="text"
+                class="textarea__input"
+                wrap="hard"
+                placeholder="It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......"></textarea>
+            </div>
+          </div>
+          <!-- Stats -->
+          <div class="row space-between content__stats">
+            <div class="stats__box violet_bg column space-between">
+              <div class="stats_header">Total Question's</div>
+              <div class="stats_text">200,000</div>
+            </div>
+            <div class="stats__box purple_bg column space-between">
+              <div class="stats_header">Total Answer's</div>
+              <div class="stats_text">105,000</div>
+            </div>
+            <div class="stats__box pink_bg column space-between">
+              <div class="stats_header">Participated</div>
+              <div class="stats_text">10,000</div>
+            </div>
+            <div class="stats__box black_bg column space-between">
+              <div class="stats_header">Total Passed</div>
+              <div class="stats_text">6,000</div>
+            </div>
+          </div>
+
+          <!-- Info Component -->
+          <div class="info_box row space-between">
+            <div class="column flex-c info_box_left">
+              <div class="left_button column flex-c cursor button_selected">
+                Your Info
+              </div>
+              <div class="left_button column flex-c cursor">Bookmarks</div>
+              <div class="left_button column flex-c cursor">Settings</div>
+            </div>
+            <div class="info_box_right relative">
+              Your information
+              <table class="info_table">
+                <tr>
+                  <th>Name</th>
+                  <td class="table__separator">:</td>
+                  <td class="table__item">Atul Singhal</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td class="table__separator">:</td>
+                  <td class="table__item">atul@gmail.com</td>
+                </tr>
+                <tr>
+                  <th>Phone</th>
+                  <td class="table__separator">:</td>
+                  <td class="table__item">+91 8131424888</td>
+                </tr>
+                <tr>
+                  <th>Marks</th>
+                  <td class="table__separator">:</td>
+                  <td class="table__item">500.00</td>
+                </tr>
+              </table>
+              <div class="next_button cursor absolute row flex-c gap-xs">
+                Next
+                <image src="./static/IconBigArrow.svg" class="icon_arrow" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
