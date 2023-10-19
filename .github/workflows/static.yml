@@ -2,6 +2,12 @@
 name: Deploy static content to Pages
 
 on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
