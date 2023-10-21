@@ -308,8 +308,12 @@ body {
 
 .icons_container {
   position: sticky;
-  margin-right: -100px;
-  left: auto;
+  top: -120px;
+  bottom: 100%;
+  margin-left: 101%;
+  height: 0;
+  width: 0;
+  transform: translateY(120px);
 }
 
 .icon_container {
