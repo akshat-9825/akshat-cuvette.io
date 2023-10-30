@@ -84,6 +84,12 @@ body {
 .calculator_display {
   width: 536px;
   height: 142.728px;
+  border-radius: 12px;
+  background: #181f32;
+  overflow-x: hidden;
+}
+
+.calculator_text {
   color: #fff;
   justify-content: flex-end;
   padding-right: 35px;
@@ -94,9 +100,13 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  border-radius: 12px;
-  background: #181f32;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.calculator_text::-webkit-scrollbar {
+  display: none;
 }
 
 .calculator_body {
