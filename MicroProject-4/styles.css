@@ -81,19 +81,28 @@ body {
   color: var(--white);
 }
 
+.calculator_text:empty:before {
+  content: attr(data-placeholder);
+  letter-spacing: 2px;
+  font-family: "Scientific Calculator LCD", sans-serif;
+}
+
 .calculator_display {
   width: 536px;
   height: 142.728px;
   border-radius: 12px;
   background: #181f32;
   overflow-x: hidden;
+  justify-content: flex-end;
 }
 
 .calculator_text {
-  color: #fff;
-  justify-content: flex-end;
-  padding-right: 35px;
-  padding-left: 35px;
+  max-width: 466px;
+  white-space: nowrap;
+  color: var(--white);
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin-right: 35px;
   letter-spacing: 15px;
   font-family: Segoe UI;
   font-size: 55px;
