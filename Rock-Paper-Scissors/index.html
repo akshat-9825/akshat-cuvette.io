@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="column full-width align-c">
+      <!-- Score Counter -->
+      <div class="score_counter row space-between">
+        <div class="column">
+          <div class="counter_title">Rock</div>
+          <div class="counter_title">Paper</div>
+          <div class="counter_title">Scissors</div>
+        </div>
+        <div class="row counter_scores">
+          <div class="column space-between score_box align-c full-height">
+            <div class="score_title">Computer Score</div>
+            <div id="computer_score" class="score_number">0</div>
+          </div>
+          <div class="column space-between score_box align-c full-height">
+            <div class="score_title">Your Score</div>
+            <div id="computer_score" class="score_number">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Game Container -->
+    <div class="game_container row flex-c">
+      <div class="relative cursor popover_z line">
+        <image src="./static/rock_cover.svg" class="icon_cover" />
+        <image src="./static/rock.svg" class="icon absolute" />
+      </div>
+      <div class="relative cursor popover_z line rotate_paper">
+        <image src="./static/paper_cover.svg" class="icon_cover" />
+        <image src="./static/paper.svg" class="icon absolute" />
+      </div>
+      <div
+        class="relative cursor popover_z scissor_container line rotate_scissor">
+        <image src="./static/scissor_cover.svg" class="icon_cover" />
+        <image src="./static/scissor.svg" class="icon absolute" />
+      </div>
+    </div>
+  </body>
+</html>
