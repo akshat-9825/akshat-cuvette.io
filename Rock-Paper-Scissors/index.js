@@ -23,6 +23,9 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
     node.addEventListener("animationend", handleAnimationEnd, { once: true });
   });
+
+animateCSS("game_container", "fadeIn");
+animateCSS("score_container", "fadeIn");
 window.showRules = () => {
   getById("rules").style.display = "block";
   animateCSS("rules", "fadeInRight");
@@ -79,6 +82,7 @@ const hideState1 = (item) => {
       animateCSS(items[i], "fadeOut")
         .then(() => {
           getById(items[i]).style.visibility = "hidden";
+          getById(items[i]).classList.remove("expand");
         })
         .then(() => {
           getById("result_id").style.display = "block";
@@ -88,8 +92,8 @@ const hideState1 = (item) => {
         });
     }
   }
-  getById(items[item]).classList.add("selected");
   getById(items[item]).classList.remove("expand");
+  getById(items[item]).classList.add("selected");
   getById(`${items[item]}_id`).style.display = "block";
   animateCSS(`${items[item]}_id`, "fadeIn");
 };
@@ -151,6 +155,11 @@ window.selectItem = (item) => {
 
 window.playAgain = () => {
   clickedItem = false;
+  getById("last_page").style.display = "none";
+  getById("score_container").style.display = "flex";
+  getById("game_container").style.display = "flex";
+  animateCSS("game_container", "fadeIn");
+  animateCSS("score_container", "fadeIn");
   getById("result_id").style.display = "none";
   getById("pc_choice").style.display = "none";
   getById("result_text_container").style.display = "none";
@@ -167,4 +176,11 @@ window.playAgain = () => {
   }
   getById("pc_choice").classList.remove("winner_effect");
   removeResultImage();
+};
+
+window.nextBtn = () => {
+  getById("last_page").style.display = "flex";
+  animateCSS("last_page", "fadeIn");
+  getById("score_container").style.display = "none";
+  getById("game_container").style.display = "none";
 };

@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Score Counter -->
-    <div class="column full-width align-c">
+    <div class="column full-width align-c" id="score_container">
       <div class="score_counter row space-between">
         <div class="column">
           <div class="counter_title">Rock</div>
@@ -100,7 +100,12 @@
     <!-- Bottom Box -->
     <div class="row space-between absolute bottom_box">
       <div class="row flex-c cursor rule_box" onclick="showRules()">RULES</div>
-      <div class="row flex-c cursor rule_box next_box" id="next_box">NEXT</div>
+      <div
+        class="row flex-c cursor rule_box next_box"
+        id="next_box"
+        onclick="nextBtn()">
+        NEXT
+      </div>
     </div>
 
     <!-- Rules Container -->
@@ -112,6 +117,19 @@
         src="./static/cross_cover.svg"
         class="absolute close cursor"></image>
       <div class="absolute x cursor" onclick="closeBtn()">X</div>
+    </div>
+
+    <div class="column flex-c relative last_page" id="last_page">
+      <image src="./static/You_Won.png" class="win_img relative"> </image>
+      <image src="./static/trophy.png" class="trophy_img relative"> </image>
+      <div class="last_page_text">HURRAY!!</div>
+      <div class="last_page_subtext">YOU WON THE GAME</div>
+      <button
+        class="row flex-c play_again cursor last_page_button"
+        onclick="playAgain()"
+        id="play_again">
+        Play Again
+      </button>
     </div>
   </body>
 </html>

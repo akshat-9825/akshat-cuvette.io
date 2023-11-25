@@ -341,3 +341,43 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 0.3s;
 }
+
+.win_img {
+  top: 86px;
+}
+
+.trophy_img {
+  margin-top: -103px;
+}
+
+.last_page {
+  display: none;
+}
+
+.last_page_text {
+  margin-top: 32px;
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 91px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 9.1px;
+}
+
+.last_page_subtext {
+  margin-top: 25px;
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4.1px;
+}
+
+.last_page_button {
+  margin-top: 58px;
+}
