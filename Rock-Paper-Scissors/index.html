@@ -28,11 +28,11 @@
         <div class="row counter_scores">
           <div class="column space-between score_box align-c full-height">
             <div class="score_title">Computer Score</div>
-            <div id="computer_score" class="score_number">0</div>
+            <div id="pc_score" class="score_number">0</div>
           </div>
           <div class="column space-between score_box align-c full-height">
             <div class="score_title">Your Score</div>
-            <div id="computer_score" class="score_number">0</div>
+            <div class="score_number" id="player_score">0</div>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
 
     <!-- Main Game Container -->
     <div
-      class="game_container row flex-c row space-between"
+      class="game_container row flex-c row space-between relative"
       id="game_container">
       <div class="relative">
         <div
@@ -75,16 +75,29 @@
         </div>
         <div class="line scissor_line" tag="lines"></div>
       </div>
+      <!-- Computer's Selection -->
+      <div class="absolute pc_choice" id="pc_choice">
+        <div class="column flex-c" id="result">
+          <div class="player_id absolute" id="result_id">PC Picked</div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div
+        class="absolute column flex-c result_text_container"
+        id="result_text_container">
+        <div id="result_text" class="result_text">You win</div>
+        <div class="against_pc" id="against_pc">Against PC</div>
+        <button class="row flex-c play_again cursor" onclick="playAgain()">
+          Play Again
+        </button>
+      </div>
     </div>
 
     <!-- Bottom Box -->
     <div class="row space-between absolute bottom_box">
       <div class="row flex-c cursor rule_box" onclick="showRules()">RULES</div>
-      <div
-        class="row flex-c cursor rule_box next_box animate__animated animate__slideInRight"
-        id="next_box">
-        NEXT
-      </div>
+      <div class="row flex-c cursor rule_box next_box" id="next_box">NEXT</div>
     </div>
 
     <!-- Rules Container -->
