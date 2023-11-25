@@ -51,9 +51,7 @@ const addResultImage = (item = "scissor") => {
 const removeResultImage = () => {
   const resultDiv = getById("result");
   const resultIdChild = document.getElementById("result_id");
-  console.log(resultIdChild);
   for (let child of Array.from(resultDiv.children)) {
-    console.log(child, child === resultIdChild);
     if (child !== resultIdChild) {
       resultDiv.removeChild(child);
     }
@@ -98,7 +96,6 @@ const hideState1 = (item) => {
 
 const findWinner = (item) => {
   const randomNumber = Math.floor(Math.random() * 1000) % 3;
-  console.log(items[randomNumber], randomNumber);
   addResultImage(items[randomNumber]);
   if (randomNumber === item) {
     setTimeout(() => {
@@ -164,6 +161,7 @@ window.playAgain = () => {
     getById(items[i]).style.transform = "translateX(0px) translateY(0px)";
     getById(items[i]).style.visibility = "visible";
     getById(`${items[i]}_id`).style.display = "none";
+    getById(items[i]).classList.add("expand", "cursor");
     getById(items[i]).classList.remove("selected");
     getById(items[i]).classList.remove("winner_effect");
   }
