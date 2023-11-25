@@ -1,0 +1,383 @@
+:root {
+  --brown: #ffcd9e;
+  --black: #282828;
+  --grey: #484848;
+  --offgrey: #9f9f9f;
+  --darkgrey: #6f7373;
+  --white: #ffff;
+  --border-radius: 8px;
+  --purple: #6f6af7;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: #8cc461;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.justify-c {
+  justify-content: center;
+}
+
+.align-c {
+  align-items: center;
+}
+
+.flex-c {
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.score_counter {
+  width: 80%;
+  max-width: 800px;
+  min-height: 158px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  border: 2px solid #fff;
+  background: rgba(28, 48, 120, 0);
+  margin-top: 62px;
+  padding: 16px 18px;
+}
+
+.counter_title {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  height: fit-content;
+}
+
+.counter_scores {
+  gap: 29px;
+}
+
+.score_box {
+  border-radius: 9px;
+  background: var(--white);
+  width: 139px;
+  padding-top: 7px;
+}
+
+.score_title {
+  color: #656565;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 80%;
+}
+
+.score_number {
+  color: #252525;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.game_container {
+  width: 65%;
+  max-width: 500px;
+  margin: 100px auto 0;
+  gap: 106px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.icon {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -27%);
+}
+
+.scissor_container {
+  transform: translateY(-50px);
+}
+
+.popover_z {
+  position: relative;
+  z-index: 3;
+}
+
+.line {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 270px;
+  height: 16px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.64);
+  left: 0;
+}
+
+.rock_line {
+  top: 50%;
+  transform: translate(79px, -8px);
+}
+
+.paper_line {
+  transform: rotate(120deg) translate(79px, 94px);
+}
+
+.scissor_line {
+  transform: rotate(-120deg) translate(244px, -11px);
+}
+
+.expand:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.bottom_box {
+  right: 25px;
+  bottom: 23px;
+  gap: 32px;
+}
+
+.rule_box {
+  border-radius: 10px;
+  border: 2px solid var(--white);
+  background: rgba(217, 217, 217, 0);
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.1px;
+  width: 119px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.next_box {
+  display: none;
+}
+
+.rules_container {
+  display: none;
+  bottom: 83px;
+  right: 38px;
+  z-index: 5;
+}
+
+.close {
+  top: 0;
+  right: 0;
+  transform: translate(26px, -26px);
+}
+
+.x {
+  z-index: 3;
+  top: 0;
+  right: 0;
+  transform: translate(35%, -41%);
+  color: var(--white);
+  font-family: Dangrek;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.player_id {
+  display: none;
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.7px;
+  top: -55px;
+}
+
+.state2_icons {
+  scale: 1;
+}
+
+.winner_effect:before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  bottom: 13px;
+  left: 13px;
+  right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 rgba(46, 154, 37, 0.39), 0 0 0 16px rgba(46, 154, 37, 0.39),
+    0 0 0 32px rgba(46, 154, 37, 0.39), 0 0 0 48px rgba(46, 154, 37, 0.39);
+  z-index: -1;
+  animation: ripples 1s linear infinite;
+  animation-play-state: running;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+
+@keyframes ripples {
+  to {
+    box-shadow: 0 0 0 16px rgba(46, 154, 37, 0.39),
+      0 0 0 32px rgba(46, 154, 37, 0.39), 0 0 0 48px rgba(46, 154, 37, 0.39),
+      0 0 0 64px rgba(0, 0, 0, 0);
+  }
+}
+
+.state2_icon_cover {
+  scale: 1.29;
+}
+
+.selected.selected {
+  display: flex;
+  scale: 1.1;
+  transition: 1s;
+}
+
+.pc_choice {
+  display: none;
+  top: 110px;
+  right: -100px;
+  scale: 1.1;
+}
+
+.result_text_container {
+  display: none;
+  top: 134px;
+}
+
+.result_text {
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.9px;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+
+.against_pc {
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.play_again {
+  width: 174px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--white);
+  color: #6b6b6b;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  border: none;
+}
+
+.play_again:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+}
+
+.win_img {
+  top: 86px;
+}
+
+.trophy_img {
+  margin-top: -103px;
+}
+
+.last_page {
+  display: none;
+}
+
+.last_page_text {
+  margin-top: 32px;
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 91px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 9.1px;
+}
+
+.last_page_subtext {
+  margin-top: 25px;
+  color: var(--white);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4.1px;
+}
+
+.last_page_button {
+  margin-top: 58px;
+}

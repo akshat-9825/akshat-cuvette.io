@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dangrek"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body>
+    <!-- Score Counter -->
+    <div class="column full-width align-c" id="score_container">
+      <div class="score_counter row space-between">
+        <div class="column">
+          <div class="counter_title">Rock</div>
+          <div class="counter_title">Paper</div>
+          <div class="counter_title">Scissors</div>
+        </div>
+        <div class="row counter_scores">
+          <div class="column space-between score_box align-c full-height">
+            <div class="score_title">Computer Score</div>
+            <div id="pc_score" class="score_number">0</div>
+          </div>
+          <div class="column space-between score_box align-c full-height">
+            <div class="score_title">Your Score</div>
+            <div class="score_number" id="player_score">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div
+      class="game_container row flex-c row space-between relative"
+      id="game_container">
+      <div class="relative">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="rock"
+          onclick="selectItem(0)">
+          <div class="player_id absolute" id="rock_id">You Picked</div>
+          <image src="./static/rock_cover.svg" class="icon_cover" />
+          <image src="./static/rock.svg" class="icon absolute" />
+        </div>
+        <div class="line rock_line" tag="lines"></div>
+      </div>
+      <div class="relative">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="paper"
+          onclick="selectItem(1)">
+          <div class="player_id absolute" id="paper_id">You Picked</div>
+          <image src="./static/paper_cover.svg" class="icon_cover" />
+          <image src="./static/paper.svg" class="icon absolute" />
+        </div>
+        <div class="line paper_line" tag="lines"></div>
+      </div>
+      <div class="relative scissor_container">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="scissor"
+          onclick="selectItem(2)">
+          <div class="player_id absolute" id="scissor_id">You Picked</div>
+          <image src="./static/scissor_cover.svg" class="icon_cover" />
+          <image src="./static/scissor.svg" class="icon absolute" />
+        </div>
+        <div class="line scissor_line" tag="lines"></div>
+      </div>
+      <!-- Computer's Selection -->
+      <div class="absolute pc_choice" id="pc_choice">
+        <div class="column flex-c" id="result">
+          <div class="player_id absolute" id="result_id">PC Picked</div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div
+        class="absolute column flex-c result_text_container"
+        id="result_text_container">
+        <div id="result_text" class="result_text">You win</div>
+        <div class="against_pc" id="against_pc">Against PC</div>
+        <button
+          class="row flex-c play_again cursor"
+          onclick="playAgain()"
+          id="play_again">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Box -->
+    <div class="row space-between absolute bottom_box">
+      <div class="row flex-c cursor rule_box" onclick="showRules()">RULES</div>
+      <div
+        class="row flex-c cursor rule_box next_box"
+        id="next_box"
+        onclick="nextBtn()">
+        NEXT
+      </div>
+    </div>
+
+    <!-- Rules Container -->
+    <div
+      class="rules_container absolute animate__animated animate__fadeInRight"
+      id="rules">
+      <image src="./static/rules.svg"></image>
+      <image
+        src="./static/cross_cover.svg"
+        class="absolute close cursor"></image>
+      <div class="absolute x cursor" onclick="closeBtn()">X</div>
+    </div>
+
+    <div class="column flex-c relative last_page" id="last_page">
+      <image src="./static/You_Won.png" class="win_img relative"> </image>
+      <image src="./static/trophy.png" class="trophy_img relative"> </image>
+      <div class="last_page_text">HURRAY!!</div>
+      <div class="last_page_subtext">YOU WON THE GAME</div>
+      <button
+        class="row flex-c play_again cursor last_page_button"
+        onclick="playAgain()"
+        id="play_again">
+        Play Again
+      </button>
+    </div>
+  </body>
+</html>
