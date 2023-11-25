@@ -105,6 +105,7 @@ const findWinner = (item) => {
       getById("result_text").innerHTML = "Tie Up";
       getById("against_pc").style.display = "none";
       getById("result_text_container").style.display = "flex";
+      getById("play_again").innerText = "REPLAY";
     }, 2000);
   } else if (
     (randomNumber === 0 && item === 1) ||
