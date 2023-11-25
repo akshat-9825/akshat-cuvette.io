@@ -9,6 +9,12 @@
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dangrek"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <div class="column full-width align-c">
@@ -33,19 +39,46 @@
     </div>
     <!-- Main Game Container -->
     <div class="game_container row flex-c">
-      <div class="relative cursor popover_z line">
-        <image src="./static/rock_cover.svg" class="icon_cover" />
-        <image src="./static/rock.svg" class="icon absolute" />
+      <div class="relative">
+        <div class="expand cursor popover_z">
+          <image src="./static/rock_cover.svg" class="icon_cover" />
+          <image src="./static/rock.svg" class="icon absolute" />
+        </div>
+        <div class="line rock_line"></div>
       </div>
-      <div class="relative cursor popover_z line rotate_paper">
-        <image src="./static/paper_cover.svg" class="icon_cover" />
-        <image src="./static/paper.svg" class="icon absolute" />
+      <div class="relative">
+        <div class="expand cursor popover_z">
+          <image src="./static/paper_cover.svg" class="icon_cover" />
+          <image src="./static/paper.svg" class="icon absolute" />
+        </div>
+        <div class="line paper_line"></div>
       </div>
+      <div class="relative scissor_container">
+        <div class="expand cursor popover_z">
+          <image src="./static/scissor_cover.svg" class="icon_cover" />
+          <image src="./static/scissor.svg" class="icon absolute" />
+        </div>
+        <div class="line scissor_line"></div>
+      </div>
+    </div>
+    <!-- Bottom Box -->
+    <div class="row space-between absolute bottom_box">
+      <div class="row flex-c cursor rule_box" onclick="showRules()">RULES</div>
       <div
-        class="relative cursor popover_z scissor_container line rotate_scissor">
-        <image src="./static/scissor_cover.svg" class="icon_cover" />
-        <image src="./static/scissor.svg" class="icon absolute" />
+        class="row flex-c cursor rule_box next_box animate__animated animate__slideInRight"
+        id="next_box">
+        NEXT
       </div>
+    </div>
+    <!-- Rules Container -->
+    <div
+      class="rules_container absolute animate__animated animate__fadeInRight"
+      id="rules">
+      <image src="./static/rules.svg"></image>
+      <image
+        src="./static/cross_cover.svg"
+        class="absolute close cursor"></image>
+      <div class="absolute x cursor" onclick="closeBtn()">X</div>
     </div>
   </body>
 </html>
