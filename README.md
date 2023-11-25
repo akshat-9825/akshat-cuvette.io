@@ -9,3 +9,5 @@ Practice and learning Full-Stack web development
 [Microproject-3](https://akshat-9825.github.io/akshat-cuvette.io/MicroProject-3/index.html)
 
 [Microproject-4](https://akshat-9825.github.io/akshat-cuvette.io/MicroProject-4/index.html)
+
+[Rock-Paper-Scissors](https://akshat-9825.github.io/akshat-cuvette.io/Rock-Paper-Scissors/)
