@@ -17,8 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
+    <!-- Score Counter -->
     <div class="column full-width align-c">
-      <!-- Score Counter -->
       <div class="score_counter row space-between">
         <div class="column">
           <div class="counter_title">Rock</div>
@@ -37,30 +37,46 @@
         </div>
       </div>
     </div>
+
     <!-- Main Game Container -->
-    <div class="game_container row flex-c">
+    <div
+      class="game_container row flex-c row space-between"
+      id="game_container">
       <div class="relative">
-        <div class="expand cursor popover_z">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="rock"
+          onclick="selectItem(0)">
+          <div class="player_id absolute" id="rock_id">You Picked</div>
           <image src="./static/rock_cover.svg" class="icon_cover" />
           <image src="./static/rock.svg" class="icon absolute" />
         </div>
-        <div class="line rock_line"></div>
+        <div class="line rock_line" tag="lines"></div>
       </div>
       <div class="relative">
-        <div class="expand cursor popover_z">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="paper"
+          onclick="selectItem(1)">
+          <div class="player_id absolute" id="paper_id">You Picked</div>
           <image src="./static/paper_cover.svg" class="icon_cover" />
           <image src="./static/paper.svg" class="icon absolute" />
         </div>
-        <div class="line paper_line"></div>
+        <div class="line paper_line" tag="lines"></div>
       </div>
       <div class="relative scissor_container">
-        <div class="expand cursor popover_z">
+        <div
+          class="expand cursor popover_z column flex-c"
+          id="scissor"
+          onclick="selectItem(2)">
+          <div class="player_id absolute" id="scissor_id">You Picked</div>
           <image src="./static/scissor_cover.svg" class="icon_cover" />
           <image src="./static/scissor.svg" class="icon absolute" />
         </div>
-        <div class="line scissor_line"></div>
+        <div class="line scissor_line" tag="lines"></div>
       </div>
     </div>
+
     <!-- Bottom Box -->
     <div class="row space-between absolute bottom_box">
       <div class="row flex-c cursor rule_box" onclick="showRules()">RULES</div>
@@ -70,6 +86,7 @@
         NEXT
       </div>
     </div>
+
     <!-- Rules Container -->
     <div
       class="rules_container absolute animate__animated animate__fadeInRight"
