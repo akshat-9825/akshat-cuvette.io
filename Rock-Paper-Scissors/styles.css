@@ -20,6 +20,10 @@ body {
   margin: 0;
   background-color: #8cc461;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    scale: 0.6;
+  }
 }
 
 .row {
@@ -79,6 +83,10 @@ body {
   background: rgba(28, 48, 120, 0);
   margin-top: 62px;
   padding: 16px 18px;
+
+  @media screen and (max-width: 600px) {
+    width: 650px;
+  }
 }
 
 .counter_title {
@@ -132,6 +140,10 @@ body {
   gap: 106px;
   flex-wrap: wrap;
   z-index: 1;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .icon {
