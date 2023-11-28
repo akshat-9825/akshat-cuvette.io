@@ -15,11 +15,13 @@ body * {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  user-select: none;
+  max-width: 100% !important;
+  overflow: hidden !important;
   margin: 0;
   background-color: #8cc461;
-  overflow: hidden;
 
   @media (max-width: 600px) {
     scale: 0.6;
