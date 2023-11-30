@@ -107,7 +107,7 @@ const findWinner = (item) => {
       getById("against_pc").style.display = "none";
       getById("result_text_container").style.display = "flex";
       getById("play_again").innerText = "REPLAY";
-    }, 2000);
+    }, 1000);
   } else if (
     (randomNumber === 0 && item === 1) ||
     (randomNumber === 1 && item === 2) ||
@@ -122,7 +122,7 @@ const findWinner = (item) => {
       getById("player_score").innerText = playerScore;
       localStorage.setItem("playerScore", playerScore);
       localStorage.setItem("pcScore", pcScore);
-    }, 2000);
+    }, 1000);
   } else {
     pcScore += 1;
     setTimeout(() => {
@@ -132,7 +132,7 @@ const findWinner = (item) => {
       getById("pc_score").innerText = pcScore;
       localStorage.setItem("playerScore", playerScore);
       localStorage.setItem("pcScore", pcScore);
-    }, 2000);
+    }, 1000);
   }
 };
 
