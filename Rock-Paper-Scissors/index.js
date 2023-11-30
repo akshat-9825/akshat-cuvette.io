@@ -116,6 +116,7 @@ const findWinner = (item) => {
     playerScore += 1;
     setTimeout(() => {
       getById("result_text").innerHTML = "You Win";
+      getById("next_box").style.display = "flex";
       getById(items[item]).classList.add("winner_effect");
       getById("result_text_container").style.display = "flex";
       getById("player_score").innerText = playerScore;
@@ -139,7 +140,6 @@ window.selectItem = (item) => {
   if (!clickedItem) {
     clickedItem = true;
     hideState1(item);
-    getById("next_box").style.display = "flex";
     animateCSS("next_box", "slideInRight");
     if (item === 0) {
       getById("rock").style.transform = "translateX(-125px) translateY(100px)";
